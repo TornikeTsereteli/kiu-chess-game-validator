@@ -22,6 +22,12 @@ public class Square {
         this.position = new Position(x, y);
     }
 
+    public Square(Square other){
+        this.color = other.color;
+        this.position = other.position;
+        this.display = other.display;
+    }
+
     public boolean isOccupied() {
         return occupyingPiece != null;
     }

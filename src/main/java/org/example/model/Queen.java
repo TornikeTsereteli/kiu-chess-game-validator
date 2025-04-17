@@ -1,7 +1,9 @@
 package org.example.model;
 
+import org.example.common.moveExecutor.BasicMoveExecutor;
 import org.example.common.moveExecutor.MoveExecutorStrategy;
 import org.example.common.movement.MovementStrategy;
+import org.example.common.movement.StandardQueenMovement;
 import org.example.model.enums.PieceColor;
 
 public class Queen extends Piece {
@@ -13,14 +15,12 @@ public class Queen extends Piece {
     @Override
     protected MovementStrategy getMovementStrategy() {
 
-//        return new StandardQueenMovement(this);
-        return null;
+        return new StandardQueenMovement(this);
     }
 
     @Override
     protected MoveExecutorStrategy getMoveExecutorStrategy() {
-//        return new BasicMoveExecutor(this);
-        return null;
+        return new BasicMoveExecutor(this);
     }
 
 

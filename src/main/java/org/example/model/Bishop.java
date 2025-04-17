@@ -1,7 +1,9 @@
 package org.example.model;
 
+import org.example.common.moveExecutor.BasicMoveExecutor;
 import org.example.common.moveExecutor.MoveExecutorStrategy;
 import org.example.common.movement.MovementStrategy;
+import org.example.common.movement.StandardBishopMovement;
 import org.example.model.enums.PieceColor;
 
 public class Bishop extends Piece {
@@ -12,13 +14,12 @@ public class Bishop extends Piece {
 
     @Override
     protected MovementStrategy getMovementStrategy() {
-        return null;
+        return new StandardBishopMovement(this);
     }
 
     @Override
     protected MoveExecutorStrategy getMoveExecutorStrategy() {
-//        return new BasicMoveExecutor(this);
-        return null;
+        return new BasicMoveExecutor(this);
     }
 
 //    @Override
