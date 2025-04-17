@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e8ba85e-759f-4676-b776-83d665860243" name="Changes" comment="add domain classes">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/common/moveExecutor/BasicMoveExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/common/movement/StandardBishopMovement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/common/movement/StandardKingMovement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/common/movement/StandardKnightMovement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/common/movement/StandardPawnMovement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/common/movement/StandardQueenMovement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/common/movement/StandardRookMovement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Pawn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/util/MovementHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Board.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +49,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "add-domain-classes-and-main-logics",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/WERO/IdeaProjects/ChessGameValidatorProject/src/main/java/org/example/common/movement",
     "node.js.detected.package.eslint": "true",
@@ -97,6 +88,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
         <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
