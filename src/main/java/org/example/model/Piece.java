@@ -25,6 +25,13 @@ public abstract class Piece {
     @Setter
     private MoveExecutorStrategy moveExecutorStrategy;
 
+
+    @Getter
+    @Setter
+    private boolean wasMoved;
+
+
+
     public Piece(PieceColor color, Square initSq) {
         this.color = color;
         this.position = initSq;

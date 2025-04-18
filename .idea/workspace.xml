@@ -4,16 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e8ba85e-759f-4676-b776-83d665860243" name="Changes" comment="implement Movument strategies">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/pieceMovement/BishopMovementTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/pieceMovement/KingMovementTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/pieceMovement/KnightMovementTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/pieceMovement/PawnMovementTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/pieceMovement/QueenMovementTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/pieceMovement/RookMovementTests.java" afterDir="false" />
+    <list default="true" id="7e8ba85e-759f-4676-b776-83d665860243" name="Changes" comment="add new feature, CheckmateDetector.java already impemented it it can identify that on the position if the checkmate occured, check or stalemate">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/common/GameSimulator/GameSimulator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/common/GameSimulator/GameSimulatorBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/common/movement/AddCastleMovementStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/ChessMove.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/enums/ChessPiece.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/parser/PgnParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/parser/Regex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/parser/app/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/BoardRendering.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/BoardView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/ChessApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/ChessBoardPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/ChessGameUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/PieceView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/util/PieceImageLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/plays/tsereteli vs petriashvili.pgn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ChessMoveParserTests/ChessMoveTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/GameSimulationTests/GameSimulatorTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Piece.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +45,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="test/add-game-state-rules-tests" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -51,19 +64,30 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.App.executor": "Run",
+    "Application.App.executor": "Debug",
+    "Application.Application.executor": "Debug",
+    "Application.ChessApp.executor": "Run",
     "JUnit.BishopMovementTests.executor": "Run",
+    "JUnit.CheckStateRulesTests.executor": "Run",
+    "JUnit.CheckmateTests.executor": "Run",
+    "JUnit.ChessMoveTest.executor": "Run",
+    "JUnit.ChessMoveTest.testFromTextWithSimplePawnMove.executor": "Run",
+    "JUnit.ChessMoveTest.testLongAlgebraicNotation.executor": "Run",
+    "JUnit.ChessMoveTest.testSquareToSquareWithCapture.executor": "Debug",
+    "JUnit.GameSimulatorTests.simpleTest.executor": "Run",
+    "JUnit.GameSimulatorTests.testSimpleDevelopmentMoves_WithCapturesAndNoSpecialMoves.executor": "Run",
     "JUnit.KingMovementTests.executor": "Run",
     "JUnit.KnightMovementTests.executor": "Run",
     "JUnit.PawnMovementTests.executor": "Run",
     "JUnit.RookMovementTests.executor": "Run",
+    "JUnit.StalemateTests.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/WERO/IdeaProjects/ChessGameValidatorProject/src/main/java/org/example/common/movement",
+    "last_opened_file_path": "C:/Users/WERO/IdeaProjects/ChessGameValidatorProject/src/test/java/GameStateTests",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -80,6 +104,7 @@
       <recent name="org.example.model" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\WERO\IdeaProjects\ChessGameValidatorProject\src\test\java\GameStateTests" />
       <recent name="C:\Users\WERO\IdeaProjects\ChessGameValidatorProject\src\main\java\org\example\common\movement" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -87,89 +112,88 @@
       <recent name="org.example.model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RookMovementTests">
-    <configuration name="BishopMovementTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.ChessApp">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.App" />
       <module name="ChessGameValidatorProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.pieceMovement.*" />
+          <option name="PATTERN" value="org.example.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example.pieceMovement" />
-      <option name="MAIN_CLASS_NAME" value="org.example.pieceMovement.BishopMovementTests" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KingMovementTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ChessApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.ui.ChessApp" />
       <module name="ChessGameValidatorProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.pieceMovement.*" />
+          <option name="PATTERN" value="org.example.ui.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example.pieceMovement" />
-      <option name="MAIN_CLASS_NAME" value="org.example.pieceMovement.KingMovementTests" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KnightMovementTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ChessMoveTest.testSquareToSquareWithCapture" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ChessGameValidatorProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.pieceMovement.*" />
+          <option name="PATTERN" value="ChessMoveParserTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example.pieceMovement" />
-      <option name="MAIN_CLASS_NAME" value="org.example.pieceMovement.KnightMovementTests" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="ChessMoveParserTests" />
+      <option name="MAIN_CLASS_NAME" value="ChessMoveParserTests.ChessMoveTest" />
+      <option name="METHOD_NAME" value="testSquareToSquareWithCapture" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PawnMovementTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameSimulatorTests.simpleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ChessGameValidatorProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.pieceMovement.*" />
+          <option name="PATTERN" value="GameSimulationTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example.pieceMovement" />
-      <option name="MAIN_CLASS_NAME" value="org.example.pieceMovement.PawnMovementTests" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="GameSimulationTests" />
+      <option name="MAIN_CLASS_NAME" value="GameSimulationTests.GameSimulatorTests" />
+      <option name="METHOD_NAME" value="simpleTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RookMovementTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameSimulatorTests.testSimpleDevelopmentMoves_WithCapturesAndNoSpecialMoves" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ChessGameValidatorProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.pieceMovement.*" />
+          <option name="PATTERN" value="GameSimulationTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example.pieceMovement" />
-      <option name="MAIN_CLASS_NAME" value="org.example.pieceMovement.RookMovementTests" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="GameSimulationTests" />
+      <option name="MAIN_CLASS_NAME" value="GameSimulationTests.GameSimulatorTests" />
+      <option name="METHOD_NAME" value="testSimpleDevelopmentMoves_WithCapturesAndNoSpecialMoves" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RookMovementTests" />
-        <item itemvalue="JUnit.PawnMovementTests" />
-        <item itemvalue="JUnit.KnightMovementTests" />
-        <item itemvalue="JUnit.KingMovementTests" />
-        <item itemvalue="JUnit.BishopMovementTests" />
+        <item itemvalue="Application.ChessApp" />
+        <item itemvalue="JUnit.GameSimulatorTests.testSimpleDevelopmentMoves_WithCapturesAndNoSpecialMoves" />
+        <item itemvalue="JUnit.GameSimulatorTests.simpleTest" />
+        <item itemvalue="Application.App" />
+        <item itemvalue="JUnit.ChessMoveTest.testSquareToSquareWithCapture" />
       </list>
     </recent_temporary>
   </component>
@@ -213,7 +237,31 @@
       <option name="project" value="LOCAL" />
       <updated>1744931330914</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add move class, which can be used to undo the game it will be helpful for impleneting checkmate detector">
+      <option name="closed" value="true" />
+      <created>1744956900847</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1744956900847</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add new feature, CheckmateDetector.java already impemented it it can identify that on the position if the checkmate occured, check or stalemate">
+      <option name="closed" value="true" />
+      <created>1744957024553</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1744957024553</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add new feature, CheckmateDetector.java already impemented it it can identify that on the position if the checkmate occured, check or stalemate">
+      <option name="closed" value="true" />
+      <created>1744958851319</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1744958851319</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,7 +282,9 @@
     <MESSAGE value="add domain classes" />
     <MESSAGE value="add movument helper" />
     <MESSAGE value="implement Movument strategies" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement Movument strategies" />
+    <MESSAGE value="add move class, which can be used to undo the game it will be helpful for impleneting checkmate detector" />
+    <MESSAGE value="add new feature, CheckmateDetector.java already impemented it it can identify that on the position if the checkmate occured, check or stalemate" />
+    <option name="LAST_COMMIT_MESSAGE" value="add new feature, CheckmateDetector.java already impemented it it can identify that on the position if the checkmate occured, check or stalemate" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -244,7 +294,39 @@
           <line>14</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/App.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/common/GameSimulator/GameSimulator.java</url>
+          <line>65</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/GameSimulationTests/GameSimulatorTests.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/parser/app/Application.java</url>
+          <line>7</line>
+          <properties class="org.example.parser.app.Application" method="main">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="org.example.model.Pawn" memberName="movementStrategy" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>
