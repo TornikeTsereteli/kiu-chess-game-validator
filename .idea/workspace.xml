@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e8ba85e-759f-4676-b776-83d665860243" name="Changes" comment="add domain classes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/util/MovementHelper.java" afterDir="false" />
+    <list default="true" id="7e8ba85e-759f-4676-b776-83d665860243" name="Changes" comment="implement Movument strategies">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/pieceMovement/BishopMovementTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/pieceMovement/KingMovementTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/pieceMovement/KnightMovementTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/pieceMovement/PawnMovementTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/pieceMovement/QueenMovementTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/pieceMovement/RookMovementTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +52,11 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.App.executor": "Run",
+    "JUnit.BishopMovementTests.executor": "Run",
+    "JUnit.KingMovementTests.executor": "Run",
+    "JUnit.KnightMovementTests.executor": "Run",
+    "JUnit.PawnMovementTests.executor": "Run",
+    "JUnit.RookMovementTests.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -64,6 +76,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example.model" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\WERO\IdeaProjects\ChessGameValidatorProject\src\main\java\org\example\common\movement" />
     </key>
@@ -72,24 +87,89 @@
       <recent name="org.example.model" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.App" />
+  <component name="RunManager" selected="JUnit.RookMovementTests">
+    <configuration name="BishopMovementTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ChessGameValidatorProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.pieceMovement.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="org.example.pieceMovement" />
+      <option name="MAIN_CLASS_NAME" value="org.example.pieceMovement.BishopMovementTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KingMovementTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ChessGameValidatorProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.pieceMovement.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.pieceMovement" />
+      <option name="MAIN_CLASS_NAME" value="org.example.pieceMovement.KingMovementTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KnightMovementTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ChessGameValidatorProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.pieceMovement.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.pieceMovement" />
+      <option name="MAIN_CLASS_NAME" value="org.example.pieceMovement.KnightMovementTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PawnMovementTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ChessGameValidatorProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.pieceMovement.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.pieceMovement" />
+      <option name="MAIN_CLASS_NAME" value="org.example.pieceMovement.PawnMovementTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RookMovementTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ChessGameValidatorProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.pieceMovement.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.pieceMovement" />
+      <option name="MAIN_CLASS_NAME" value="org.example.pieceMovement.RookMovementTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
-        <item itemvalue="Application.App" />
+        <item itemvalue="JUnit.RookMovementTests" />
+        <item itemvalue="JUnit.PawnMovementTests" />
+        <item itemvalue="JUnit.KnightMovementTests" />
+        <item itemvalue="JUnit.KingMovementTests" />
+        <item itemvalue="JUnit.BishopMovementTests" />
       </list>
     </recent_temporary>
   </component>
@@ -107,6 +187,7 @@
       <workItem from="1744044176969" duration="609000" />
       <workItem from="1744648490911" duration="1018000" />
       <workItem from="1744929185615" duration="729000" />
+      <workItem from="1744954848809" duration="1340000" />
     </task>
     <task id="LOCAL-00001" summary="add domain classes">
       <option name="closed" value="true" />
@@ -116,7 +197,23 @@
       <option name="project" value="LOCAL" />
       <updated>1744649464202</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add movument helper">
+      <option name="closed" value="true" />
+      <created>1744931178830</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1744931178831</updated>
+    </task>
+    <task id="LOCAL-00003" summary="implement Movument strategies">
+      <option name="closed" value="true" />
+      <created>1744931330914</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1744931330914</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,14 +232,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add domain classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="add domain classes" />
+    <MESSAGE value="add movument helper" />
+    <MESSAGE value="implement Movument strategies" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement Movument strategies" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/model/Rook.java</url>
-          <line>12</line>
+          <line>14</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
