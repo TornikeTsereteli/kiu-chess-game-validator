@@ -24,7 +24,7 @@ public class BasicMoveExecutor implements MoveExecutorStrategy{
         piece.getPosition().removePiece();
         piece.setPosition(destination);
         piece.getPosition().put(piece);
-        piece.setWasMoved(true);
+//        piece.setWasMoved(true);
         return true;
     }
 }

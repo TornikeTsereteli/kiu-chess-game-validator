@@ -10,7 +10,8 @@ import java.util.List;
 public class ChessApp {
     public static void main(String[] args) throws Exception {
         PgnParser parser =  new PgnParser();
-        List<String> moveStrings = parser.parse("C:\\Users\\WERO\\IdeaProjects\\ChessGameValidatorProject\\src\\main\\resources\\plays\\dzetki mate.pgn");
+//        List<String> moveStrings = parser.parse("C:\\Users\\WERO\\IdeaProjects\\ChessGameValidatorProject\\src\\main\\resources\\plays\\dzetki mate.pgn");
+        List<String> moveStrings = parser.parse("C:\\Users\\WERO\\IdeaProjects\\ChessGameValidatorProject\\src\\main\\resources\\plays\\tsereteli vs petriashvili.pgn");
         List<ChessMove> chessMoves = ChessMove.fromTextList(moveStrings);
         Board board = new Board();
         GameSimulator simulator = new GameSimulator(board); // assumes makeMove() & getBoard() methods

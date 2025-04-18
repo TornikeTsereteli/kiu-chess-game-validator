@@ -6,7 +6,9 @@ import org.example.model.Board;
 import org.example.model.ChessMove;
 import org.example.parser.PgnParser;
 
+import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.util.List;
 
 /**
@@ -15,19 +17,41 @@ import java.util.List;
  */
 public class App 
 {
-    public static void main( String[] args ) throws Exception {
-        PgnParser parser = new PgnParser();
-        ChessMove chessMove = new ChessMove();
 
-        List<String> moves = parser.parse("C:\\Users\\WERO\\IdeaProjects\\ChessGameValidatorProject\\src\\main\\resources\\plays\\tsereteli vs petriashvili.pgn");
+        public static void main(String[] args) throws Exception {
+            PgnParser parser = new PgnParser();
+            ChessMove chessMove = new ChessMove();
 
-//        List<ChessMove> chessMoves = chessMove.toStructuredMoves(moves);
-        List<ChessMove> chessMoves = chessMove.toStructuredMoves(List.of("e4","e5","Nf3","Nf6"));
+            ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+            URL playsDirUrl = classLoader.getResource("plays");
 
-        Board board = new Board();
-        GameSimulatorBase gameSimulatorBase = new GameSimulator(board);
+            if (playsDirUrl == null) {
+                System.err.println("Directory 'plays' not found in resources.");
+                return;
+            }
 
-        gameSimulatorBase.SimulateGame(chessMoves);
+            File playsDir = new File(playsDirUrl.toURI());
+            File[] pgnFiles = playsDir.listFiles((dir, name) -> name.endsWith(".pgn"));
+
+            if (pgnFiles == null || pgnFiles.length == 0) {
+                System.out.println("No PGN files found in resources/plays");
+                return;
+            }
+
+            for (File pgnFile : pgnFiles) {
+                System.out.println("Simulating game from: " + pgnFile.getName());
+
+                List<String> moves = parser.parse(pgnFile.getAbsolutePath());
+                List<ChessMove> chessMoves = chessMove.toStructuredMoves(moves);
+
+                Board board = new Board();
+                GameSimulatorBase gameSimulatorBase = new GameSimulator(board);
+                gameSimulatorBase.SimulateGame(chessMoves);
+
+                System.out.println("Game finished: " + pgnFile.getName());
+                System.out.println("------------------------------------------------");
+            }
+        }
 
     }
-}
+

@@ -29,6 +29,7 @@ public class GameSimulator implements GameSimulatorBase{
             if (checkmateDetector.isInCheck(color) || checkmateDetector.isStalemate(color)){
                 throw new Exception("checkmate/stalemate no move can be made");
             }
+
             Square destination = getSquare(board, move);
             Piece piece = getPiece(board, move,destination);
             piece.move(destination,board);
@@ -48,15 +49,36 @@ public class GameSimulator implements GameSimulatorBase{
             if (checkmateDetector.isInCheck(color) || checkmateDetector.isStalemate(color)){
                 throw new Exception("checkmate/stalemate no move can be made");
             }
-            Square destination = getSquare(board, move);
-            Piece piece = getPiece(board, move,destination);
-            piece.move(destination,board);
 
+            if(move.getPosition() == "c7"){
+                System.out.println("ss");
+            }
+
+            if(move.getPosition().equals("O-O")){
+                Square destination = getSmallCastlingSquare(board.isWhiteTurn());
+                Piece king = getKing(board.isWhiteTurn());
+                king.move(destination, board);
+            }else {
+
+                if(move.getPosition().equals("O-O-O")){
+                    Square destination = getBigCastlingSquare(board.isWhiteTurn());
+                    Piece king = getKing(board.isWhiteTurn());
+                    king.move(destination, board);
+                }else {
+                    Square destination = getSquare(board, move);
+                    Piece piece = getPiece(board, move, destination);
+                    piece.move(destination, board);
+                }
+            }
             PieceColor checkColor = board.getTurn()? PieceColor.WHITE : PieceColor.BLACK;
             if(checkmateDetector.isInCheck(checkColor)){
                 throw new Exception("player moved illegal move there is Check");
             }
             board.toggleTurn();
+    }
+
+    private Piece getKing(boolean whiteTurn) {
+        return whiteTurn ? board.getWhiteKing(): board.getBlackKing();
     }
 
 
@@ -88,6 +110,13 @@ public class GameSimulator implements GameSimulatorBase{
             }
         }
         return null;
+    }
+
+    private Square getSmallCastlingSquare(boolean isWhiteTurn){
+        return isWhiteTurn ? board.getSquare("g1") : board.getSquare("g8");
+    }
+    private Square getBigCastlingSquare(boolean isWhiteTurn){
+        return isWhiteTurn ? board.getSquare("c1") : board.getSquare("c8");
     }
 
     private ChessPiece pieceToChessPiece(Piece piece){

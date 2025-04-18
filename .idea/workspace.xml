@@ -5,28 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e8ba85e-759f-4676-b776-83d665860243" name="Changes" comment="add new feature, CheckmateDetector.java already impemented it it can identify that on the position if the checkmate occured, check or stalemate">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/common/GameSimulator/GameSimulator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/common/GameSimulator/GameSimulatorBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/common/movement/AddCastleMovementStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/ChessMove.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/enums/ChessPiece.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/parser/PgnParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/parser/Regex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/parser/app/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/BoardRendering.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/BoardView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/ChessApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/ChessBoardPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/ChessGameUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/PieceView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/util/PieceImageLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/plays/tsereteli vs petriashvili.pgn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ChessMoveParserTests/ChessMoveTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/GameSimulationTests/GameSimulatorTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/common/moveExecutor/WithCastleMoveExecutor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Piece.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/common/GameSimulator/GameSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/common/GameSimulator/GameSimulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/common/moveExecutor/BasicMoveExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/common/moveExecutor/BasicMoveExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/common/movement/StandardKingMovement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/common/movement/StandardKingMovement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/King.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ui/BoardRendering.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ui/BoardView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ui/ChessApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/ChessApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ui/PieceView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plays/tsereteli vs petriashvili.pgn" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plays/tsereteli vs petriashvili.pgn" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +54,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.App.executor": "Debug",
+    "Application.App.executor": "Run",
     "Application.Application.executor": "Debug",
     "Application.ChessApp.executor": "Run",
     "JUnit.BishopMovementTests.executor": "Run",
@@ -112,7 +102,7 @@
       <recent name="org.example.model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ChessApp">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.App" />
       <module name="ChessGameValidatorProject" />
@@ -135,22 +125,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ChessMoveTest.testSquareToSquareWithCapture" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ChessGameValidatorProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ChessMoveParserTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ChessMoveParserTests" />
-      <option name="MAIN_CLASS_NAME" value="ChessMoveParserTests.ChessMoveTest" />
-      <option name="METHOD_NAME" value="testSquareToSquareWithCapture" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -187,13 +161,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="KingMovementTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ChessGameValidatorProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.pieceMovement.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.pieceMovement" />
+      <option name="MAIN_CLASS_NAME" value="org.example.pieceMovement.KingMovementTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
         <item itemvalue="Application.ChessApp" />
+        <item itemvalue="JUnit.KingMovementTests" />
         <item itemvalue="JUnit.GameSimulatorTests.testSimpleDevelopmentMoves_WithCapturesAndNoSpecialMoves" />
         <item itemvalue="JUnit.GameSimulatorTests.simpleTest" />
-        <item itemvalue="Application.App" />
-        <item itemvalue="JUnit.ChessMoveTest.testSquareToSquareWithCapture" />
       </list>
     </recent_temporary>
   </component>
@@ -295,22 +284,19 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/App.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/common/GameSimulator/GameSimulator.java</url>
-          <line>65</line>
-          <properties>
-            <option name="lambda-ordinal" value="-1" />
-          </properties>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/GameSimulationTests/GameSimulatorTests.java</url>
           <line>28</line>
           <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/common/movement/StandardKingMovement.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/common/GameSimulator/GameSimulator.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/parser/app/Application.java</url>
