@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e8ba85e-759f-4676-b776-83d665860243" name="Changes" comment="add new feature, CheckmateDetector.java already impemented it it can identify that on the position if the checkmate occured, check or stalemate">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/common/moveExecutor/WithCastleMoveExecutor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/common/GameSimulator/GameSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/common/GameSimulator/GameSimulator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/common/moveExecutor/BasicMoveExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/common/moveExecutor/BasicMoveExecutor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/common/movement/StandardKingMovement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/common/movement/StandardKingMovement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/King.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ui/BoardRendering.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ui/BoardView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ui/ChessApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/ChessApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ui/PieceView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/plays/tsereteli vs petriashvili.pgn" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plays/tsereteli vs petriashvili.pgn" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,43 +43,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.App.executor": "Run",
-    "Application.Application.executor": "Debug",
-    "Application.ChessApp.executor": "Run",
-    "JUnit.BishopMovementTests.executor": "Run",
-    "JUnit.CheckStateRulesTests.executor": "Run",
-    "JUnit.CheckmateTests.executor": "Run",
-    "JUnit.ChessMoveTest.executor": "Run",
-    "JUnit.ChessMoveTest.testFromTextWithSimplePawnMove.executor": "Run",
-    "JUnit.ChessMoveTest.testLongAlgebraicNotation.executor": "Run",
-    "JUnit.ChessMoveTest.testSquareToSquareWithCapture.executor": "Debug",
-    "JUnit.GameSimulatorTests.simpleTest.executor": "Run",
-    "JUnit.GameSimulatorTests.testSimpleDevelopmentMoves_WithCapturesAndNoSpecialMoves.executor": "Run",
-    "JUnit.KingMovementTests.executor": "Run",
-    "JUnit.KnightMovementTests.executor": "Run",
-    "JUnit.PawnMovementTests.executor": "Run",
-    "JUnit.RookMovementTests.executor": "Run",
-    "JUnit.StalemateTests.executor": "Run",
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/WERO/IdeaProjects/ChessGameValidatorProject/src/test/java/GameStateTests",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.App.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Application.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.ChessApp.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BishopMovementTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CheckStateRulesTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CheckmateTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ChessMoveTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ChessMoveTest.testFromTextWithSimplePawnMove.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ChessMoveTest.testLongAlgebraicNotation.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ChessMoveTest.testSquareToSquareWithCapture.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.GameSimulatorTests.simpleTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GameSimulatorTests.testSimpleDevelopmentMoves_WithCapturesAndNoSpecialMoves.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.KingMovementTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.KnightMovementTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PawnMovementTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RookMovementTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StalemateTests.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/WERO/IdeaProjects/ChessGameValidatorProject/src/test/java/GameStateTests&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.example.model" />
@@ -102,7 +93,7 @@
       <recent name="org.example.model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="Application.ChessApp">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.App" />
       <module name="ChessGameValidatorProject" />
@@ -178,8 +169,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
         <item itemvalue="Application.ChessApp" />
+        <item itemvalue="Application.App" />
         <item itemvalue="JUnit.KingMovementTests" />
         <item itemvalue="JUnit.GameSimulatorTests.testSimpleDevelopmentMoves_WithCapturesAndNoSpecialMoves" />
         <item itemvalue="JUnit.GameSimulatorTests.simpleTest" />
@@ -201,6 +192,8 @@
       <workItem from="1744648490911" duration="1018000" />
       <workItem from="1744929185615" duration="729000" />
       <workItem from="1744954848809" duration="1340000" />
+      <workItem from="1744999063877" duration="151000" />
+      <workItem from="1744999251424" duration="320000" />
     </task>
     <task id="LOCAL-00001" summary="add domain classes">
       <option name="closed" value="true" />

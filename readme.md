@@ -67,3 +67,8 @@ The architecture follows clean object-oriented principles with a modular structu
     - Piece-specific movement (including edge cases like blocked paths and captures).
     - King movement and castling.
     - Game rule enforcement (e.g., no illegal king moves).
+
+
+#  run the ChessApp class: 
+
+it shows exactly pgn is transformed and simulated on board
