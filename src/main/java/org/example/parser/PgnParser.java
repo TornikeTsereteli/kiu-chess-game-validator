@@ -3,6 +3,8 @@ package org.example.parser;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -23,19 +25,40 @@ public class PgnParser {
             "[a-h][1-8](?:=[QRBN])?[+#]?" +                     // Pawn move
             ")$";
 
-    public List<String> parse(String filePath) throws IOException {
-        List<String> allLines = readAllLines(filePath);
+    public List<List<String>> parse(String filePath) throws IOException {
+//        List<String> allLines = readAllLines(filePath);
+        String pgnContent = Files.readString(Path.of(filePath));
+        List<String> games = splitGames(pgnContent);
 
-        List<String> tagSection = extractTagSection(allLines);
-        List<String> moveSection = extractMoveSection(allLines);
 
-        validateTags(tagSection);
-        String cleanedMoveText = cleanMoveText(moveSection);
-        validateMoveNumbers(cleanedMoveText);
-        List<String> moves = extractMoves(cleanedMoveText);
-        validateMoves(moves);
+        return games.stream().map(game->{
+            List<String> allLines = List.of(game.split("\n"));
+            List<String> tagSection = extractTagSection(allLines);
+            List<String> moveSection = extractMoveSection(allLines);
+            validateTags(tagSection);
+            String cleanedMoveText = cleanMoveText(moveSection);
+            validateMoveNumbers(cleanedMoveText);
+            List<String> moves = extractMoves(cleanedMoveText);
+            validateMoves(moves);
+            return moves;
+        }).toList();
 
-        return moves;
+    }
+
+    private static List<String> splitGames(String pgnContent) {
+        List<String> games = new ArrayList<>();
+
+        // Split on the pattern of new game headers starting with [Event
+        String[] rawGames = pgnContent.split("(?=\\[Event )");
+
+        for (String game : rawGames) {
+            String trimmed = game.trim();
+            if (!trimmed.isEmpty()) {
+                games.add(trimmed);
+            }
+        }
+
+        return games;
     }
 
     private List<String> readAllLines(String path) throws IOException {

@@ -22,37 +22,38 @@ public class GameSimulator implements GameSimulatorBase{
     @Override
     public void SimulateGame(List<ChessMove> moves) throws Exception {
 
-        CheckmateDetector checkmateDetector = new StandardCheckmateDetector(board);
-
+//        CheckmateDetector checkmateDetector = new StandardCheckmateDetector(board);
+//
+//        for(ChessMove move: moves){
+//            PieceColor color = board.getTurn() ? PieceColor.BLACK : PieceColor.WHITE;
+//            if (checkmateDetector.isInCheck(color) || checkmateDetector.isStalemate(color)){
+//                throw new Exception("checkmate/stalemate no move can be made");
+//            }
+//
+//            Square destination = getSquare(board, move);
+//            Piece piece = getPiece(board, move,destination);
+//            piece.move(destination,board);
+//
+//            PieceColor checkColor = board.getTurn()? PieceColor.WHITE : PieceColor.BLACK;
+//            if(checkmateDetector.isInCheck(checkColor)){
+//                throw new Exception("player moved illegal move there is Check");
+//            }
+//            board.toggleTurn();
+//        }
         for(ChessMove move: moves){
-            PieceColor color = board.getTurn() ? PieceColor.BLACK : PieceColor.WHITE;
-            if (checkmateDetector.isInCheck(color) || checkmateDetector.isStalemate(color)){
-                throw new Exception("checkmate/stalemate no move can be made");
-            }
-
-            Square destination = getSquare(board, move);
-            Piece piece = getPiece(board, move,destination);
-            piece.move(destination,board);
-
-            PieceColor checkColor = board.getTurn()? PieceColor.WHITE : PieceColor.BLACK;
-            if(checkmateDetector.isInCheck(checkColor)){
-                throw new Exception("player moved illegal move there is Check");
-            }
-            board.toggleTurn();
+            makeMove(move);
         }
     }
 
     public void makeMove(ChessMove move) throws Exception {
-        CheckmateDetector checkmateDetector = new StandardCheckmateDetector(board);
+            CheckmateDetector checkmateDetector = new StandardCheckmateDetector(board);
 
             PieceColor color = board.getTurn() ? PieceColor.BLACK : PieceColor.WHITE;
             if (checkmateDetector.isInCheck(color) || checkmateDetector.isStalemate(color)){
                 throw new Exception("checkmate/stalemate no move can be made");
             }
 
-            if(move.getPosition() == "c7"){
-                System.out.println("ss");
-            }
+
 
             if(move.getPosition().equals("O-O")){
                 Square destination = getSmallCastlingSquare(board.isWhiteTurn());

@@ -67,3 +67,18 @@ The architecture follows clean object-oriented principles with a modular structu
     - Piece-specific movement (including edge cases like blocked paths and captures).
     - King movement and castling.
     - Game rule enforcement (e.g., no illegal king moves).
+
+
+✅ Running the Project
+To run PGN parsing and simulation without UI:
+
+Execute: App.java
+
+This will parse all .pgn files located in the resources/plays directory and simulate each game through the logic engine.
+
+To run with a UI for game playback:
+
+Execute: ChessApp.java
+
+This will display the game visually and animate moves using the GUI.
+

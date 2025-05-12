@@ -2,6 +2,7 @@ package org.example.model;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 import org.example.model.enums.ChessPiece;
 
 import java.util.ArrayList;
@@ -194,5 +195,14 @@ public class ChessMove {
             default:
                 throw new IllegalArgumentException("Invalid piece: " + pieceChar);
         }
+    }
+
+    @Override
+    public String toString() {
+        return "ChessMove{" +
+                "piece=" + piece +
+                ", from='" + from + '\'' +
+                ", position='" + position + '\'' +
+                '}';
     }
 }

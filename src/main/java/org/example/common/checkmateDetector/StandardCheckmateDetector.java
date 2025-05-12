@@ -33,8 +33,8 @@ public class StandardCheckmateDetector implements CheckmateDetector{
         boolean v = moves.stream().allMatch( move -> {
             move.getMovedPiece().move(move.getTo(),board);
             boolean b = isInCheck(color);
-            System.out.println(move);
-            System.out.println(b);
+//            System.out.println(move);
+//            System.out.println(b);
 
             move.undo(board);
             return b;
@@ -50,8 +50,8 @@ public class StandardCheckmateDetector implements CheckmateDetector{
         boolean v = moves.stream().allMatch( move -> {
             move.getMovedPiece().move(move.getTo(),board);
             boolean b = isInCheck(color);
-            System.out.println(move);
-            System.out.println(b);
+//            System.out.println(move);
+//            System.out.println(b);
 
             move.undo(board);
             return b;
